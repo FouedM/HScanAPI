@@ -13,20 +13,6 @@ use api::history::{add_history, get_history, init_user};
 use api::product_api::verify_product;
 use orm::mongo_repo::MongoRepo;
 
-use dotenv::dotenv;
-use mongodb::bson::{doc, Document};
-use mongodb::{
-    options::{ClientOptions, FindOptions},
-    Client, Collection, Database,
-};
-use reqwest::Error;
-use rocket::form::{Form, FromForm};
-use rocket::http::Status;
-use rocket::serde::json::Json;
-use rocket::State;
-use serde::{Deserialize, Serialize};
-use std::env;
-
 #[launch]
 async fn rocket() -> _ {
     let db = MongoRepo::init().await;
