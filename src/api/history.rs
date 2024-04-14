@@ -4,9 +4,7 @@ use crate::{
     models::product_details::{FoodFact, Product, ProductDetails, Response},
     orm::mongo_repo::MongoRepo,
 };
-use mongodb::bson::raw::ErrorKind;
 use mongodb::{bson::oid::ObjectId, results::InsertOneResult};
-use reqwest::Error;
 use rocket::form::{Form, FromForm};
 use rocket::{http::Status, serde::json::Json, State};
 
