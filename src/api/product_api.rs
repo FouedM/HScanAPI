@@ -6,16 +6,9 @@ use crate::{
     orm::mongo_repo::MongoRepo,
 };
 use dotenv::dotenv;
-use futures::future::ok;
-use mongodb::{
-    bson::oid::ObjectId,
-    options::{ClientOptions, FindOptions},
-    results::InsertOneResult,
-};
+
 use reqwest::Error;
-use rocket::form::{Form, FromForm};
 use rocket::{http::Status, serde::json::Json, State};
-use serde::{Deserialize, Serialize};
 use std::env;
 
 fn check_codes(codes: Vec<Code>) -> Decision {
