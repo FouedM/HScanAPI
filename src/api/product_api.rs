@@ -39,6 +39,11 @@ fn check_codes(codes: Vec<Code>) -> Decision {
     }
 }
 
+#[get("/status")]
+pub fn status() -> &'static str {
+    "API is up and running"
+}
+
 #[post("/verifyProduct", data = "<product>")]
 pub async fn verify_product(
     db: &State<MongoRepo>,

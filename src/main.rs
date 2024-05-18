@@ -8,7 +8,7 @@ extern crate mongodb;
 extern crate serde;
 
 use api::history::{add_history, get_history, init_user};
-use api::product_api::verify_product;
+use api::product_api::{status, verify_product};
 use orm::mongo_repo::MongoRepo;
 
 #[launch]
@@ -21,4 +21,5 @@ async fn rocket() -> _ {
         .mount("/", routes![get_history])
         .mount("/", routes![add_history])
         .mount("/", routes![init_user])
+        .mount("/", routes![status])
 }
