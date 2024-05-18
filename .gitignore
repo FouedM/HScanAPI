@@ -1,0 +1,32 @@
+# Compiled files
+*.o
+*.so
+*.rlib
+*.dll
+*.dylib
+*.exe
+
+# Executables
+target/
+
+# These directories contain codegen-ed files
+out/
+
+# Dependency directories
+**/node_modules/
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Environment variables
+.env
+
+# Ignore Cargo.lock in libraries
+**/Cargo.lock
+
+# Ignore .DS_Store on Mac
+.DS_Store
